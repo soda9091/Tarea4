@@ -1,98 +1,89 @@
-/* Estilos generales */
+/* Gama de colores utilizada */
+
+:root {
+  --verde-oscuro: #232E26;
+  --verde-medio: #1A4A36;
+  --verde-grisaceo: #677D6A;
+  --beige-arena: #D6BD98;
+  --verde-blanco: #F8F4FF;
+  --verde-claro: #D9EFDE;
+}
+
+/* Body */
 body {
-  margin: 0; /* Elimina los márgenes predeterminados */
-  font-family: 'Quicksand', sans-serif; /* Establece la fuente principal */
-  background-color: #1e3d34; /* Color de fondo de la página */
-  color: #fff; /* Color del texto */
+  background-color: #1A4A36;
 }
 
-/* Estilos del encabezado */
-header {
-  display: flex; /* Diseño flexible para el contenedor */
-  justify-content: space-between; /* Espaciado entre los elementos del encabezado */
-  align-items: center; /* Alinea verticalmente al centro */
-  padding: 1rem 2rem; /* Espaciado interno del encabezado */
-  background-color: #d9f0e1; /* Color de fondo del encabezado */
-  margin-bottom: 1.5rem; /* Espaciado inferior */
+/* **Estilos barra de navegación** */
+
+.navbar {
+  background-color:  #D9EFDE !important;  
+  font-family: 'Quicksand', sans-serif;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  transition: border-radius 0.3s ease;
+  padding-left: 1rem;
 }
 
-header .logo {
-  font-size: 1.5rem; /* Tamaño de la fuente del logo */
-  font-weight: bold; /* Negrita en el texto del logo */
-  color: #1e3d34; /* Color del texto */
-  margin-right: 2rem; /* Espaciado a la derecha */
+.nav-link.color-texto {
+  color: var(--verde-medio) !important;
 }
 
-/* Barra de navegación */
-header nav {
-  flex: 1; /* Ocupa el espacio restante */
-  display: flex; /* Diseño flexible */
-  justify-content: center; /* Centra los enlaces horizontalmente */
-  align-items: center; /* Alinea los enlaces verticalmente */
+.nav-link.color-texto:hover {
+  color: var(--verde-oscuro) !important;
 }
 
-header nav ul {
-  list-style: none; /* Quita los puntos de la lista */
-  display: flex; /* Muestra los elementos en línea */
-  gap: 1.5rem; /* Espaciado entre los elementos */
-  margin: 0; /* Elimina márgenes */
-  padding: 0; /* Elimina relleno interno */
+/* Div logo */
+.navbar-brand {
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-header nav ul li a {
-  text-decoration: none; /* Quita el subrayado de los enlaces */
-  color: #1e3d34; /* Color del texto */
-  font-weight: bold; /* Negrita */
-  padding: 0.5rem 1rem; /* Espaciado interno */
-  transition: color 0.3s ease; /* Animación suave al cambiar de color */
+/* Logo (falta añadir) */
+.navbar-brand img {
+  max-height: 40px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
 }
 
-header nav ul li a:hover {
-  color: #145a2f; /* Cambia el color al pasar el mouse */
+.btn.btn-outline-success {
+  margin-right: 10px;
 }
 
-/* Botones del encabezado */
-header .buttons {
-  display: flex; /* Diseño flexible */
-  gap: 0.5rem; /* Espaciado entre los botones */
-  margin-left: 2rem; /* Espaciado a la izquierda */
+
+/* Borde redondeado, radio responsivo dependiendo tamaño */
+@media (max-width: 768px) {
+  .navbar {
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+  }
 }
 
-header .buttons button {
-  padding: 0.5rem 1.5rem; /* Espaciado interno */
-  border: none; /* Sin borde */
-  border-radius: 50px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar */
-  font-size: 0.9rem; /* Tamaño del texto */
+@media (max-width: 480px) {
+  .navbar {
+    border-bottom-left-radius: 6vw;
+    border-bottom-right-radius: 6vw;
+  }
 }
 
-header .buttons .oval {
-  background-color: #fff; /* Fondo blanco */
-  color: #1e3d34; /* Texto oscuro */
-  border: 2px solid #1e3d34; /* Bordes oscuros */
-}
+/* Estilos para Titulos en Body */
 
-header .buttons .primary {
-  background-color: #1e3d34; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-}
-
-/* Título "Acerca de Nosotros" */
-.about-title {
-  font-family: 'Quicksand', sans-serif; /* Fuente personalizada */
-  font-size: 50.67px; /* Tamaño del texto */
-  font-weight: 600; /* Semi-negrita */
-  color: #D6BD98; /* Color del texto */
-  line-height: 120%; /* Altura de línea */
-  letter-spacing: -0.43%; /* Espaciado entre letras */
-  width: 320px; /* Ancho del título */
-  height: auto; /* Altura automática */
-  margin-right: auto; /* Empuja el título hacia la izquierda */
-  margin-bottom: 2rem; /* Espaciado inferior */
-  text-align: right; /* Alinea el texto a la derecha */
+.titulos {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #D6BD98;
 }
 
 /* Contenedor de tarjetas */
+.color-texto {
+  color: var(--verde-blanco) !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
 .cards {
   display: flex; /* Diseño flexible */
   justify-content: center; /* Centra las tarjetas horizontalmente */
@@ -103,7 +94,7 @@ header .buttons .primary {
   display: flex; /* Diseño flexible */
   flex-direction: column; /* Apila los elementos en columna */
   justify-content: space-between; /* Espaciado uniforme entre los elementos */
-  background-color: #2a4d3f; /* Fondo de la tarjeta */
+  background-color: var(--verde-grisaceo); /* Fondo de la tarjeta */
   border-radius: 10px; /* Bordes redondeados */
   padding: 1rem; /* Espaciado interno */
   width: 300px; /* Ancho fijo */
@@ -124,7 +115,6 @@ header .buttons .primary {
 /* Título de la tarjeta */
 .card h2 {
   font-size: 1.5rem; /* Tamaño del texto */
-  font-weight: bold; /* Negrita */
   margin-bottom: 1rem; /* Espaciado inferior */
   text-align: center; /* Centra el texto */
 }
@@ -148,8 +138,8 @@ header .buttons .primary {
   position: absolute; /* Posicionamiento relativo a la tarjeta */
   bottom: 10px; /* Ubicación desde la parte inferior */
   right: 10px; /* Ubicación desde la derecha */
-  background-color: #232E26; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
+  background-color: var(--verde-oscuro); /* Fondo oscuro */
+  color: var(--verde-blanco); /* Texto blanco */
   border: none; /* Sin borde */
   border-radius: 50px; /* Bordes redondeados */
   padding: 1rem 2rem; /* Espaciado interno */
@@ -174,11 +164,11 @@ header .buttons .primary {
 /* Contenido dentro del modal */
 .modal-content {
   position: relative; /* Posicionamiento relativo */
-  background-color: #232E26; /* Fondo oscuro */
+  background-color:var(--verde-oscuro); /* Fondo oscuro */
   padding: 2rem; /* Espaciado interno */
   border-radius: 10px; /* Bordes redondeados */
   text-align: center; /* Alinea el texto al centro */
-  color: #fff; /* Texto blanco */
+  color: var(--verde-blanco); /* Texto blanco */
   max-width: 500px; /* Ancho máximo */
   width: 90%; /* Ocupa el 90% del ancho disponible */
 }
@@ -197,7 +187,7 @@ header .buttons .primary {
   top: 10px; /* Posición desde la parte superior */
   right: 15px; /* Posición desde la derecha */
   font-size: 1.5rem; /* Tamaño de la fuente */
-  color: #fff; /* Texto blanco */
+  color: var(--verde-blanco); /* Texto blanco */
   cursor: pointer; /* Cambia el cursor al pasar */
   background: none; /* Sin fondo */
   border: none; /* Sin borde */
@@ -209,7 +199,7 @@ header .buttons .primary {
   position: absolute; /* Posicionamiento absoluto */
   top: 50%; /* Centrado verticalmente */
   transform: translateY(-50%); /* Ajuste para centrar exactamente */
-  background-color: #1e3d34; /* Fondo oscuro */
+  background-color: var(--verde-oscuro); /* Fondo oscuro */
   color: #fff; /* Texto blanco */
   border: none; /* Sin borde */
   border-radius: 50%; /* Forma circular */

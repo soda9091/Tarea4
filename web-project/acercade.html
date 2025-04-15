@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>A cerca de</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <!-- Nav Bar inicio-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Soorot</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link color-texto active" aria-current="page" href="#">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-texto" href="#">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-texto" href="acercade.html">Acerca de...</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-texto" href="#">Formulario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-texto" href="#">Regístrate</a>
+                    </li>
+                
+                <span class="navbar-text">
+
+
+            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+    </nav>
+    <!-- Nav Bar Final -->
+
+    <main> <!-- Contenido principal de la página -->
+        <section class="about-us"> <!-- Sección sobre "Acerca de Nosotros" -->
+            <div style="margin-top: 50px; margin-bottom: 50px; ">
+                <h2 class="titulos" style="margin-top: 20px;margin-left: 100px;">Acerca de <br>
+                    nosotros</h2>
+            </div>
+            <div class="cards"> <!-- Contenedor de tarjetas -->
+                <!-- Tarjeta 1 -->
+                <div class="card">
+                    <img src="assets/Image (3).jpg" alt="El equipo"> <!-- Imagen representativa -->
+                    <h2 class="color-texto">El equipo</h2> <!-- Título de la tarjeta -->
+                    <p class="color-texto">Somos un equipo compacto de ocho personas comprometidas con la innovación en proyectos relacionados con la naturaleza...</p> <!-- Descripción breve -->
+                    <button class="learn-more" data-index="0" data-image="images/Image (3).jpg" data-title="El equipo" data-description="Somos un equipo compacto de ocho personas comprometidas con...">
+                        Ver más
+                    </button> <!-- Botón para ver más detalles -->
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="card">
+                    <img src="assets/Image (4).jpg" alt="Tu plan, nuestra misión"> <!-- Imagen representativa -->
+                    <h2 class="color-texto">Tu plan, nuestra misión</h2> <!-- Título de la tarjeta -->
+                    <p class="color-texto">En nuestra plataforma, facilitamos el acceso a equipo de alta calidad para todo tipo de actividades al aire libre...</p> <!-- Descripción breve -->
+                    <button class="learn-more" data-index="1" data-image="images/Image (4).jpg" data-title="Tu plan, nuestra misión" data-description="En nuestra plataforma, facilitamos el acceso a equipo de alta calidad...">
+                        Ver más
+                    </button> <!-- Botón para ver más detalles -->
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="card">
+                    <img src="assets/Image (5).jpg" alt="Hazlo posible"> <!-- Imagen representativa -->
+                    <h2 class="color-texto">Hazlo posible</h2> <!-- Título de la tarjeta -->
+                    <p class="color-texto">Encontrar el equipo ideal nunca ha sido tan fácil...</p> <!-- Descripción breve -->
+                    <button class="learn-more" data-index="2" data-image="images/Image (5).jpg" data-title="Hazlo posible" data-description="Encontrar el equipo ideal nunca ha sido tan fácil...">
+                        Ver más
+                    </button> <!-- Botón para ver más detalles -->
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <!-- Modal para mostrar información adicional -->
+    <div id="modal" class="modal" aria-hidden="true"> <!-- Modal oculto por defecto -->
+        <div class="modal-content"> <!-- Contenido del modal -->
+            <button class="close" aria-label="Cerrar">&times;</button> <!-- Botón para cerrar el modal -->
+            <button class="prev" aria-label="Imagen anterior">&larr;</button> <!-- Botón para ir a la imagen anterior -->
+            <img src="" alt="Imagen destacada" class="modal-image"> <!-- Imagen destacada mostrada en el modal -->
+            <h2 class="modal-title"></h2> <!-- Título dinámico del modal -->
+            <p class="modal-description"></p> <!-- Descripción dinámica del modal -->
+            <button class="next" aria-label="Imagen siguiente">&rarr;</button> <!-- Botón para ir a la siguiente imagen -->
+        </div>
+    </div>
+
+    <!-- Div para Tarjeta de Integrantes Final -->
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
