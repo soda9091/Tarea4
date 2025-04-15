@@ -1,237 +1,223 @@
+/* General Styles */
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-  background-color: #1e3d34; /* Fondo principal de la página */
-  color: #fff; /* Color del texto */
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #1e3d34;
+  color: #fff;
 }
 
+/* Header Styles */
 header {
-  display: flex; /* Usamos flexbox para alinear los elementos */
-  justify-content: space-between; /* Espaciado entre los elementos */
-  align-items: center; /* Centra verticalmente los elementos */
-  padding: 1rem 2rem; /* Espaciado interno */
-  background-color: #d9f0e1; /* Fondo del encabezado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #d9f0e1;
+  margin-bottom: 1.5rem;
 }
 
 header .logo {
-  font-size: 1.5rem; /* Tamaño del texto del logo */
-  font-weight: bold; /* Negrita para el logo */
-  color: #1e3d34; /* Color del texto del logo */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e3d34;
+  margin-right: 2rem;
 }
 
 header nav {
-display: flex;
-align-items: center;
-flex: 1;
-justify-content: space-between;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header nav ul {
-  list-style: none; /* Elimina los puntos de la lista */
-  display: flex; /* Usamos flexbox para alinear los elementos */
-  gap: 1.5rem; /* Espaciado entre los elementos */
-  margin: 0; /* Sin margen */
-  padding: 0; /* Sin padding */
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li a {
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  color: #1e3d34; /* Color del texto de los enlaces */
-  font-weight: bold; /* Negrita para los enlaces */
+  text-decoration: none;
+  color: #1e3d34;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #145a2f;
 }
 
 header .buttons {
-display: flex;
-gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 2rem;
 }
 
 header .buttons button {
-  padding: 0.5rem 1.5rem; /* Espaciado interno */
-  border: none; /* Sin borde */
-  border-radius: 50px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor a una mano */
-  font-size: 0.9rem; /* Tamaño del texto */
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 header .buttons .oval {
-  background-color: #fff; /* Fondo blanco */
-  color: #1e3d34; /* Texto oscuro */
-  border: 2px solid #1e3d34; /* Borde oscuro */
+  background-color: #fff;
+  color: #1e3d34;
+  border: 2px solid #1e3d34;
 }
 
 header .buttons .primary {
-  background-color: #1e3d34; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
+  background-color: #1e3d34;
+  color: #fff;
 }
 
-.about-us {
-  text-align: center; /* Centra el texto */
-  padding: 2rem; /* Espaciado interno */
-  position: relative; /* Posición relativa para elementos internos */
+/* About Us Title */
+.about-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 50.67px;
+  font-weight: 600;
+  color: #D6BD98;
+  line-height: 120%;
+  letter-spacing: -0.43%;
+  width: 320px;
+  height: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  text-align: right;
 }
 
-.about-us h1 {
-font-size: 2rem;
-margin-bottom: 1rem;
-}
-
-.about-us .learn-more {
-background-color: #232E26;
-color: #fff;
-border: none;
-border-radius: 50px;
-padding: 0.5rem 1.5rem;
-font-size: 0.9rem;
-cursor: pointer;
-margin-bottom: 2rem;
-}
-
+/* Cards Section */
 .cards {
-  display: flex; /* Usamos flexbox para alinear las tarjetas */
-  justify-content: center; /* Centra las tarjetas */
-  gap: 2rem; /* Espaciado entre las tarjetas */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .card {
-  background-color: #2a4d3f; /* Fondo de las tarjetas */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 1rem; /* Espaciado interno */
-  width: 300px; /* Ancho fijo de las tarjetas */
-  text-align: left; /* Alinea el texto a la izquierda */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #2a4d3f;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  height: 550px; /* Incrementé la altura para acomodar los cambios */
+  text-align: left;
+  position: relative;
 }
 
 .card img {
-  width: 100%; /* Imagen ocupa todo el ancho */
-  height: 200px; /* Altura fija */
-  object-fit: cover; /* Ajusta la imagen sin distorsión */
-  border-radius: 10px; /* Bordes redondeados */
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .card h2 {
-margin-top: 1rem;
-font-size: 1.25rem;
+  font-size: 1.5rem; /* Mantuve el tamaño del título */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
+/* Descripción debajo del título */
 .card p {
-font-size: 0.9rem;
-line-height: 1.5;
+  font-size: 1.2rem; /* Incrementé el tamaño de la fuente */
+  line-height: 1.8; /* Ajusté el espaciado entre líneas */
+  margin-bottom: auto;
+  text-align: justify;
+  overflow-wrap: break-word; /* Ajusta el texto dentro del contenedor */
+  height: 200px; /* Incrementé la altura para ocupar más espacio */
+  overflow: hidden; /* Oculta cualquier texto que exceda la altura */
+  display: -webkit-box; /* Compatibilidad con textos largos */
+  -webkit-line-clamp: 6; /* Limita las líneas visibles */
+  -webkit-box-orient: vertical;
 }
 
+/* Botón "Learn More" */
+.card .learn-more {
+  position: absolute;
+  bottom: 10px; /* Botón en la parte inferior */
+  right: 10px; /* Botón alineado a la derecha */
+  background-color: #232E26;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem; /* Incrementé el tamaño del botón */
+  font-size: 1.2rem; /* Incrementé el tamaño del texto */
+  cursor: pointer;
+}
+
+/* Modal */
 .modal {
-  display: none; /* Oculto por defecto */
-  position: fixed; /* Posición fija para que siempre esté visible */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-left: 0;
-top: 0;
-  width: 100%; /* Ocupa todo el ancho */
-  height: 100%; /* Ocupa todo el alto */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
-  display: flex; /* Flexbox para centrar el contenido */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  position: relative; /* Posición relativa para elementos internos */
-  background-color: #232E26; /* Fondo del modal */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 1.5rem; /* Espaciado interno */
-  width: 90%; /* Ancho relativo */
-  max-width: 400px; /* Ancho máximo */
-  text-align: center; /* Centra el texto */
-  color: #fff; /* Texto blanco */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+  background-color: #232E26;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .modal-content .close {
-  position: absolute; /* Posición absoluta dentro del modal */
-  top: 10px; /* Espaciado desde arriba */
-  right: 15px; /* Espaciado desde la derecha */
-  font-size: 1.5rem; /* Tamaño del texto */
-  font-weight: bold; /* Negrita */
-  color: #fff; /* Color blanco */
-  cursor: pointer; /* Cambia el cursor a una mano */
-background: none;
-border: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .modal-content .prev,
 .modal-content .next {
-  position: absolute; /* Posición absoluta dentro del modal */
-  top: 50%; /* Centrado vertical */
-  transform: translateY(-50%); /* Ajusta el centrado */
-  background-color: #1e3d34; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-  border: none; /* Sin borde */
-  border-radius: 50%; /* Forma circular */
-  width: 40px; /* Ancho del botón */
-  height: 40px; /* Alto del botón */
-  font-size: 1.5rem; /* Tamaño del texto */
-  cursor: pointer; /* Cambia el cursor a una mano */
-display: flex;
-justify-content: center;
-align-items: center;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1e3d34;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content .prev {
-  left: 10px; /* Posición a la izquierda */
+  left: 10px;
 }
 
 .modal-content .next {
-  right: 10px; /* Posición a la derecha */
-}
-
-.modal-content .prev:hover,
-.modal-content .next:hover {
-background-color: #145a2f;
-}
-
-.modal-image {
-  width: 100%; /* Imagen ocupa todo el ancho */
-  height: auto; /* Mantiene la proporción */
-  max-height: 400px; /* Altura máxima */
-  object-fit: cover; /* Ajusta la imagen sin distorsión */
-  border-radius: 50%; /* Convierte la imagen en un círculo */
-margin-bottom: 1rem;
-  background-color: #232E26; /* Fondo del tema para esquinas */
-}
-
-.modal-title {
-font-size: 1.5rem;
-font-weight: bold;
-margin-bottom: 1rem;
-}
-
-.modal-description {
-font-size: 1rem;
-line-height: 1.5;
-color: #d9d9d9;
-}
-
-.modal-exit {
-margin-top: 1rem;
-padding: 0.5rem 1.5rem;
-background-color: #1e3d34;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 1rem;
-}
-
-.modal-exit {
-    margin-top: 1rem; /* Espaciado superior */
-    padding: 0.5rem 1.5rem; /* Espaciado interno */
-    background-color: #1e3d34; /* Fondo del botón de salida */
-    color: #fff; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor a una mano */
-    font-size: 1rem; /* Tamaño del texto */
-}
-
-.modal-exit:hover {
-    background-color: #145a2f; /* Fondo más oscuro al pasar el cursor */
+  right: 10px;
 }

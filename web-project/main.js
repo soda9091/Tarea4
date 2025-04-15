@@ -1,47 +1,72 @@
 document.addEventListener("DOMContentLoaded", () => {
-const learnMoreButtons = document.querySelectorAll(".learn-more");
-const modal = document.getElementById("modal");
-const modalImage = modal.querySelector(".modal-image");
-const modalTitle = modal.querySelector(".modal-title");
-const modalDescription = modal.querySelector(".modal-description");
-const closeModal = document.querySelector(".modal-content .close");
-const prevButton = document.querySelector(".modal-content .prev");
-const nextButton = document.querySelector(".modal-content .next");
+  const learnMoreButtons = document.querySelectorAll(".learn-more");
+  const modal = document.getElementById("modal");
+  const modalImage = modal.querySelector(".modal-image");
+  const modalTitle = modal.querySelector(".modal-title");
+  const modalDescription = modal.querySelector(".modal-description");
+  const closeModalButton = modal.querySelector(".close");
+  const prevButton = modal.querySelector(".prev");
+  const nextButton = modal.querySelector(".next");
 
-  let currentIndex = 0; // Índice actual de la imagen
+  let currentIndex = 0;
 
-const cardsData = Array.from(learnMoreButtons).map(button => ({
-    image: button.getAttribute("data-image"), // Ruta de la imagen
-    title: button.getAttribute("data-title"), // Título de la tarjeta
-    description: button.getAttribute("data-description"), // Descripción completa
-}));
+  // Obtener datos de todas las tarjetas
+  const cardsData = Array.from(learnMoreButtons).map(button => ({
+      image: button.getAttribute("data-image"),
+      title: button.getAttribute("data-title"),
+      description: button.getAttribute("data-description"),
+  }));
 
-const updateModalContent = (index) => {
-    const { image, title, description } = cardsData[index];
-    modalImage.src = image; // Actualiza la imagen del modal
-    modalTitle.textContent = title; // Actualiza el título del modal
-    modalDescription.textContent = description; // Actualiza la descripción del modal
-};
+  // Actualizar contenido del modal
+  const updateModalContent = (index) => {
+      const { image, title, description } = cardsData[index];
+      modalImage.src = image;
+      modalTitle.textContent = title;
+      modalDescription.textContent = description;
+  };
 
-learnMoreButtons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-      currentIndex = index; // Actualiza el índice actual
-      updateModalContent(currentIndex); // Actualiza el contenido del modal
-      modal.style.display = "flex"; // Muestra el modal
-    });
-});
+  // Abrir modal
+  const openModal = (index) => {
+      currentIndex = index;
+      updateModalContent(currentIndex);
+      modal.style.display = "flex";
+  };
 
-prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + cardsData.length) % cardsData.length; // Navega a la imagen anterior
-    updateModalContent(currentIndex);
-});
+  // Cerrar modal
+  const closeModal = () => {
+      modal.style.display = "none";
+  };
 
-nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % cardsData.length; // Navega a la siguiente imagen
-    updateModalContent(currentIndex);
-});
+  // Mostrar la siguiente tarjeta en el modal
+  const showNext = () => {
+      currentIndex = (currentIndex + 1) % cardsData.length;
+      updateModalContent(currentIndex);
+  };
 
-closeModal.addEventListener("click", () => {
-    modal.style.display = "none"; // Cierra el modal
-});
+  // Mostrar la tarjeta anterior en el modal
+  const showPrev = () => {
+      currentIndex = (currentIndex - 1 + cardsData.length) % cardsData.length;
+      updateModalContent(currentIndex);
+  };
+
+  // Listeners para botones "Learn More"
+  learnMoreButtons.forEach((button, index) => {
+      button.addEventListener("click", () => openModal(index));
+  });
+
+  // Listener para cerrar modal
+  closeModalButton.addEventListener("click", closeModal);
+
+  // Listeners para navegación en el modal
+  prevButton.addEventListener("click", showPrev);
+  nextButton.addEventListener("click", showNext);
+
+  // Navegación con teclado
+  document.addEventListener("keydown", (event) => {
+      if (modal.style.display === "flex") {
+          if (event.key === "ArrowRight") showNext();
+          if (event.key === "ArrowLeft") showPrev();
+          if (event.key === "Escape") closeModal();
+      }
+  });
 });
