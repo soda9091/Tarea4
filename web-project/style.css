@@ -116,3 +116,91 @@ font-size: 1.25rem;
 font-size: 0.9rem;
 line-height: 1.5;
 }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #232E26; /* Matches the page's theme */
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px; /* Adjusted for better responsiveness */
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 400px; /* Limit the height for better visuals */
+  object-fit: contain; /* Ensure the image fits nicely without cropping */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d9d9d9;
+}
+
+.modal-exit {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #1e3d34;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-exit:hover {
+  background-color: #145a2f;
+}
+
+/* Add a fade-in animation for the modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
