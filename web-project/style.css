@@ -134,7 +134,7 @@ line-height: 1.5;
 
 .modal-content {
   position: relative;
-  background-color: #232E26; /* Matches the page's theme */
+  background-color: #232E26; /* Color del tema */
   border-radius: 10px;
   padding: 1.5rem;
   width: 90%;
@@ -157,13 +157,46 @@ line-height: 1.5;
   border: none;
 }
 
+.modal-content .prev,
+.modal-content .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1e3d34;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .prev {
+  left: 10px;
+}
+
+.modal-content .next {
+  right: 10px;
+}
+
+.modal-content .prev:hover,
+.modal-content .next:hover {
+  background-color: #145a2f;
+}
+
 .modal-image {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  max-height: 400px; /* Limit the height for better visuals */
-  object-fit: contain; /* Ensure the image fits nicely without cropping */
-  border-radius: 10px;
+  height: auto;
+  max-height: 400px; /* Limita la altura para que no sea demasiado grande */
+  object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+  border-radius: 50%; /* Convierte la imagen en un círculo */
   margin-bottom: 1rem;
+  background-color: #232E26; /* Fondo del tema para esquinas */
 }
 
 .modal-title {
