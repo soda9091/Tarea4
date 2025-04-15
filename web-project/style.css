@@ -136,6 +136,7 @@ header .buttons .primary {
   overflow: hidden; /* Oculta cualquier texto que exceda la altura */
   display: -webkit-box; /* Compatibilidad con textos largos */
   -webkit-line-clamp: 6; /* Limita las líneas visibles */
+  line-clamp: 6; /* Standard property for compatibility */
   -webkit-box-orient: vertical;
 }
 
